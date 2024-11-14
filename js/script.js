@@ -6,7 +6,7 @@ document.getElementById("btn-play").addEventListener("click", function () {
 
 function continueGame() {
   const alphabet = getRandomAlphabet();
-  console.log(alphabet);
+  // console.log(alphabet);
   const currentAlphabetElement = document.getElementById("current-alphabet");
   currentAlphabetElement.innerText = alphabet;
   setBackgrundColorById(alphabet);
