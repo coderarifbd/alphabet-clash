@@ -1293,6 +1293,16 @@ html{
   background-color: rgb(46 16 101 / var(--tw-bg-opacity));
 }
 
+.bg-green-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-orange-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
 .bg-main{
   background-image: url('../images/background.png');
 }

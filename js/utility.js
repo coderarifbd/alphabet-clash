@@ -8,14 +8,39 @@ function elementShowById(elementId) {
   hiddenElement.classList.remove("hidden");
 }
 
-function getRandomAlphabets() {
-  const alphabets = "abcdefghijklmnopqrstuvwxyz";
-  const alphabet = alphabets.split("");
+function getRandomAlphabet() {
+  const alphabetString = "abcdefghijklmnopqrstuvwxyz";
+  const alphabets = alphabetString.split("");
   const randomNumber = Math.floor(Math.random() * 25);
+  const alphabet = alphabets[randomNumber];
+  return alphabet;
+}
 
-  const kbd = document.getElementById(alphabet[randomNumber]);
-  kbd.style.backgroundColor = "#fca624";
-  const diplayAlphabet = document.getElementById("diplayAlphabet");
-  diplayAlphabet.innerText = alphabet[randomNumber];
-  //   console.log(alphabet[randomNumber]);
+function setBackgrundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.add("bg-orange-500");
+}
+function removeBackgrundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-orange-500");
+}
+
+function getElementValueById(elementId) {
+  const currentElement = document.getElementById(elementId);
+  const currentElementText = currentElement.innerText;
+  const currentElementValue = parseInt(currentElementText);
+  return currentElementValue;
+}
+
+function updateScoreById(elementId, value) {
+  const currentElement = document.getElementById(elementId);
+  currentElement.innerText = value;
+}
+
+function gameOver() {
+  elementHiddenById("home");
+  elementHiddenById("play-ground");
+  elementShowById("score");
+  updateScoreById("current-score", 0);
+  updateScoreById("current-life", 5);
 }

@@ -28,7 +28,7 @@
         <div
           class="artboard artboard-horizontal phone-6 border-[16px] border-[#010313CC] bg-[#ffffffB3] rounded-2xl text-center">
           <h2 class="bg-[#2F2941] inline-block p-2 rounded-b-md">Don't watch keyboard while playing...</h2>
-          <span id="diplayAlphabet"
+          <span id="current-alphabet"
             class="items-center h-full justify-center flex text-9xl text-black font-Poppins font-extrabold uppercase">Y</span>
         </div>
         <div>
@@ -67,24 +67,25 @@
           </div>
         </div>
         <div class="flex justify-between w-2/3">
-          <button class="btn">
+          <button class="btn bg-orange-500 border-0 text-white">
             <span>Life</span>
             <img src="images/heart.svg" alt="">
-            <span>1</span>
+            <span id="current-life">5</span>
           </button>
-          <button class="btn">
+          <button class="btn bg-green-600 border-0 text-white">
             <span>Score</span>
             <img src="images/monetization_on.svg" alt="">
-            <span>1</span>
+            <span id="current-score">0</span>
           </button>
         </div>
       </div>
     </section>
     <!-- Score Screen -->
-    <section class="score flex flex-col items-center justify-center min-h-screen hidden">
+    <section id="score" class="flex flex-col items-center justify-center min-h-screen hidden">
       <div class="text-center bg-violet-950 p-4 rounded space-y-3">
-        <h1 class="text-6xl font-Poppins font-bold">Score: <span class="font-normal">14</span></h1>
-        <button class="btn bg-white text-black text-xl px-8 py-3 hover:bg-orange-500 hover:text-white leading-4">Play
+        <h1 class="text-6xl font-Poppins font-bold">Score: <span id="final-score" class="font-normal">14</span></h1>
+        <button onclick="continueGame()"
+          class="btn bg-white text-black text-xl px-8 py-3 hover:bg-orange-500 hover:text-white leading-4">Play
           Again</button>
         <p class="text-xl">Practice will make you Pro</p>
       </div>
